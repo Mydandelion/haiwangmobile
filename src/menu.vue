@@ -16,7 +16,9 @@
           <img slot="icon" src="assets/choices.png">
         </mt-cell></router-link>
         <mt-cell title="订单审核" icon="more"></mt-cell>
+      <router-link to="/SurgeryRecycle">
         <mt-cell title="术后回收"></mt-cell>
+      </router-link>
         <mt-cell title="物流分配"></mt-cell>
         <mt-cell title="合作伙伴"></mt-cell>
     </div>

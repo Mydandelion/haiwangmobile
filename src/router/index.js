@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import menu from '@/menu'
 import login from '@/pages/login/login'
 import SurgeryOrder from '@/pages/orders/SurgeryOrder'
+import SurgeryRecycle from '@/pages/orders/SurgeryRecycle'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ const router = new Router({
       path: '/SurgeryOrder',
       name: 'SurgeryOrder',
       component: SurgeryOrder
+    },
+    {
+      path: '/SurgeryRecycle',
+      name: SurgeryRecycle,
+      component: SurgeryRecycle
     }
   ]
 })

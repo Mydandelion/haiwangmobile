@@ -16,7 +16,7 @@
       <mt-tab-container v-model="selected">
         <mt-tab-container-item id="1">
           <br/>
-          <mt-cell title="订单号" value="1234567"/>
+          <mt-cell title="回收单号" v-for="item in user" :key="item.user" v-bind:value="item.orderId"/>
         </mt-tab-container-item>
         <mt-tab-container-item id="2">
           <br/>
@@ -36,14 +36,31 @@ export default {
   name: 'SurgeryRecycle',
   data () {
     return {
-      selected: '1'
+      user: '',
+      title: 'hhh',
+      list: ['1', '2', '3'],
+      selected: '1',
+      show: true,
+      name: '12345789'
     }
   },
   methods: {
+    getPost () {
+      this.$ajax.get('http://localhost:8080/surgery/findAll?enterpriseName=海王&pageNumber=1&pageSize=10')
+        .then(response => {
+          this.user = response.data.content
+        }).catch(function (err) {
+          console.log(err)
+        })
+    },
     back () {
       this.$router.back(-1)
-    }
+    }},
+
+  mounted () {
+    this.getPost()
   }
+
 }
 </script>
 

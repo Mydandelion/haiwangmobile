@@ -46,7 +46,7 @@ export default {
   },
   methods: {
     getPost () {
-      this.$ajax.get('http://localhost:8080/surgery/findAll?enterpriseName=海王&pageNumber=1&pageSize=10')
+      this.$ajax.get('http://localhost:8080/surgery/findAll?enterpriseName=海王&pageNumber=1&pageSize=15')
         .then(response => {
           this.user = response.data.content
         }).catch(function (err) {

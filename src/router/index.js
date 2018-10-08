@@ -6,6 +6,8 @@ import SurgeryOrder from '@/pages/orders/SurgeryOrder'
 import SurgeryRecycle from '@/pages/orders/SurgeryRecycle'
 import LogisticsDistribution from '@/pages/Logistics/LogisticsDistribution'
 import Partner from '@/pages/Partner/Partner'
+import OrderDetail from '@/pages/orders/OrderDetail'
+
 Vue.use(Router)
 
 const router = new Router({
@@ -31,6 +33,11 @@ const router = new Router({
       component: SurgeryRecycle
     },
     {
+      path: '/OrderDetail',
+      name: OrderDetail,
+      component: OrderDetail
+    },
+    {
       path: '/LogisticsDistribution',
       name: LogisticsDistribution,
       component: LogisticsDistribution
@@ -40,7 +47,6 @@ const router = new Router({
       name: Partner,
       component: Partner
     }
-
   ]
 })
 

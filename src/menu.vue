@@ -22,8 +22,10 @@
       <router-link to="/LogisticsDistribution">
         <mt-cell title="物流分配"></mt-cell>
       </router-link>
-
+      <router-link to="/Partner">
         <mt-cell title="合作伙伴"></mt-cell>
+      </router-link>
+
     </div>
 
   </div>

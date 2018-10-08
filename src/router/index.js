@@ -5,6 +5,7 @@ import login from '@/pages/login/login'
 import SurgeryOrder from '@/pages/orders/SurgeryOrder'
 import SurgeryRecycle from '@/pages/orders/SurgeryRecycle'
 import LogisticsDistribution from '@/pages/Logistics/LogisticsDistribution'
+import Partner from '@/pages/Partner/Partner'
 Vue.use(Router)
 
 const router = new Router({
@@ -33,7 +34,13 @@ const router = new Router({
       path: '/LogisticsDistribution',
       name: LogisticsDistribution,
       component: LogisticsDistribution
+    },
+    {
+      path: '/Partner',
+      name: Partner,
+      component: Partner
     }
+
   ]
 })
 

@@ -19,7 +19,10 @@
       <router-link to="/SurgeryRecycle">
         <mt-cell title="术后回收"></mt-cell>
       </router-link>
+      <router-link to="/LogisticsDistribution">
         <mt-cell title="物流分配"></mt-cell>
+      </router-link>
+
         <mt-cell title="合作伙伴"></mt-cell>
     </div>
 

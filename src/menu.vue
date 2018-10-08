@@ -15,7 +15,9 @@
         <mt-cell title="手术订单">
           <img slot="icon" src="assets/choices.png">
         </mt-cell></router-link>
-        <mt-cell title="订单审核" icon="more"></mt-cell>
+      <router-link to="/ReviewSummary">
+        <mt-cell title="订单审核" ></mt-cell>
+      </router-link>
       <router-link to="/SurgeryRecycle">
         <mt-cell title="术后回收"></mt-cell>
       </router-link>

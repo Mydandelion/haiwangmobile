@@ -7,6 +7,7 @@ import SurgeryRecycle from '@/pages/orders/SurgeryRecycle'
 import LogisticsDistribution from '@/pages/Logistics/LogisticsDistribution'
 import Partner from '@/pages/Partner/Partner'
 import OrderDetail from '@/pages/orders/OrderDetail'
+import ReviewSummary from '@/pages/OrderReview/ReviewSummary'
 
 Vue.use(Router)
 
@@ -26,6 +27,11 @@ const router = new Router({
       path: '/SurgeryOrder',
       name: 'SurgeryOrder',
       component: SurgeryOrder
+    },
+    {
+      path: '/ReviewSummary',
+      name: 'ReviewSummary',
+      component: ReviewSummary
     },
     {
       path: '/SurgeryRecycle',

@@ -1,0 +1,39 @@
+.wait_recycle_wrap {
+  background-color: #f2f0f6
+}
+
+.wrap_item {
+  font-size: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 20px;
+  background-color: white;
+  position: relative;
+}
+
+.item_top {
+  height: 35px;
+  line-height: 35px;
+  border-bottom: 2px solid #f2f0f6;
+  position: relative;
+}
+
+.hospital {
+  font-size: 14px;
+}
+
+.status {
+  color: #009dff;
+  font-size: 8px;
+  position: absolute;
+  right: 0px;
+}
+.item_row{
+  height: 25px;line-height: 25px;
+}
+.bottom_label{
+  color: #a9a9aa;
+  width: 80px;
+  display: inline-block;
+}
+.item_data{position: absolute;bottom: 2px;right: 10px;}

@@ -33,7 +33,20 @@
           </div>
         </mt-tab-container-item>
         <mt-tab-container-item id="3">
-          <mt-cell title="订单号" value="12345679"></mt-cell>
+          <div class="wait_recycle_wrap">
+            <div class="wrap_item" v-for="order in recycle" v-if="order.currentStatus!= 0 && order.currentStatus!= -1">
+              <div class="item_top">
+                <span class="hospital">{{order.hospitalName}}</span>
+                <span class="status">已回收</span>
+              </div>
+              <div class="item_bottom">
+                <div class="item_row"><div class="bottom_label">产品类型</div><span class="bottom_info">{{order.productType}}</span></div>
+                <div class="item_row"><div class="bottom_label">手术名称</div><span class="bottom_info">{{order.surgeryName}}</span></div>
+                <div class="item_row"><div class="bottom_label">单号</div><span class="bottom_info">{{order.orderId}}</span></div>
+              </div>
+              <div class="item_data">{{order.createTime}}</div>
+            </div>
+          </div>
         </mt-tab-container-item>
       </mt-tab-container>
     </div>
@@ -51,7 +64,8 @@ export default {
       selected: '1',
       show: true,
       name: '12345789',
-      orders: []
+      orders: [],
+      recycle: []
     }
   },
   methods: {
@@ -66,6 +80,13 @@ export default {
         .then(response => {
           this.orders = response.data.content
           console.log(this.orders)
+        }).catch(function (err) {
+          console.log(err)
+        })
+      this.$ajax.get('http://localhost:8080/surgery/findAllByStatus?enterpriseName=海王&status=6&pageNumber=1&pageSize=80')
+        .then(response => {
+          this.recycle = response.data.content
+          console.log(this.recycle)
         }).catch(function (err) {
           console.log(err)
         })

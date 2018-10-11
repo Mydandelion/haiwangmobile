@@ -8,6 +8,7 @@ import LogisticsDistribution from '@/pages/Logistics/LogisticsDistribution'
 import Partner from '@/pages/Partner/Partner'
 import OrderDetail from '@/pages/orders/OrderDetail'
 import ReviewSummary from '@/pages/OrderReview/ReviewSummary'
+import OrderReviewDetail from '@/pages/OrderReview/OrderReviewDetail'
 
 Vue.use(Router)
 
@@ -32,6 +33,11 @@ const router = new Router({
       path: '/ReviewSummary',
       name: 'ReviewSummary',
       component: ReviewSummary
+    },
+    {
+      path: '/OrderReviewDetail',
+      name: 'OrderReviewDetail',
+      component: OrderReviewDetail
     },
     {
       path: '/SurgeryRecycle',

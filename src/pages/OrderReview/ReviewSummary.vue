@@ -13,6 +13,7 @@
       <mt-tab-item id="4">已退回</mt-tab-item>
       <mt-tab-item id="5">已转单</mt-tab-item>
     </mt-navbar>
+    <router-link id="OrderReviewDetail" to="/OrderReviewDetail">OrderReviewDetail</router-link>
   </div>
   </div>
 </template>
